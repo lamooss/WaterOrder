@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "858451768894",
+    "firebase_url": "https://waterpush-ac6e8.firebaseio.com",
+    "project_id": "waterpush-ac6e8",
+    "storage_bucket": "waterpush-ac6e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858451768894:android:71f2c42378d94127",
+        "android_client_info": {
+          "package_name": "com.techdmz.lamooss.waterorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858451768894-mhso4grpm8tu1sr7b30svcolieo64l77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQWcjgIb5BJKieFHRo_wdDHwQWL6H2tqI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

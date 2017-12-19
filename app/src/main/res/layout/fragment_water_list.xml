@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.techdmz.lamooss.waterorder.WaterListFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingRight="10dp">
+
+        <!--
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:background="@color/colorWarning"
+            android:text="주문가능 생수 조회하기"
+            android:layout_gravity="center"
+            android:id="@+id/search_button"
+            />
+         -->
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:textColor="#ffffff">
+
+        <ListView
+            android:id="@+id/WaterListView"
+            android:layout_width="match_parent"
+            android:layout_height="423dp"
+            android:divider="#ffffff"
+            android:dividerHeight="10dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingRight="10dp">
+
+        <!--
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:background="@color/colorWarning"
+            android:text="주문가능 생수 조회하기"
+            android:layout_gravity="center"
+            android:id="@+id/search_button"
+            />
+         -->
+        <TextView
+            android:id="@+id/TextViewSendData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이걸 abc 1122 보낼건데 오려나?" />
+
+        <TextView
+            android:id="@+id/LogOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary">
+
+        <!--
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/logOutput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </ScrollView>
+        -->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/SendOrderButton"
+            android:text="주문신청하기"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

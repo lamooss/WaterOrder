@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">WaterOrder</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Water">
+        <item>삼다수 500ml</item>
+        <item>삼다수 1.5L</item>
+        <item>삼다수 2L</item>
+        <item>평창수 500ml</item>
+        <item>평창수 1.5L</item>
+        <item>평창수 2L</item>
+        <item>아이시어 500ml</item>
+        <item>아이시어 1.5L</item>
+        <item>아이시어 2L</item>
+
+    </string-array>
+</resources>
