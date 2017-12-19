@@ -95,6 +95,8 @@ public class WaterListFragment extends Fragment {
         }
     }
 
+
+
     private ArrayAdapter waterAdapter;
     private Spinner waterSpinner;
 
