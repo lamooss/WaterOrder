@@ -21,9 +21,10 @@ import com.google.firebase.iid.FirebaseInstanceId;
 public class MainActivity extends AppCompatActivity {
 
 
-
+    /*
     RequestQueue queue;
     TextView ReceivedFCMMsg;
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         final Button OrderMgrButton = (Button)findViewById(R.id.OrderMgrButton);
         final LinearLayout notice = (LinearLayout)findViewById(R.id.notice);
 
-        ReceivedFCMMsg = (TextView)findViewById(R.id.ReceivedFCMMsg);
 
         WaterListButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,13 +63,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+        /* Intent 수신용
+        ReceivedFCMMsg = (TextView)findViewById(R.id.ReceivedFCMMsg);
         queue= Volley.newRequestQueue(getApplicationContext());
 
         Intent passedIntent =  getIntent();
         processIntent(passedIntent);
+        */
     }
 
+    /*
     public void processIntent(Intent intent)
     {
         if(intent != null)
@@ -87,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         ReceivedFCMMsg.append(data + "\n");
     }
+    */
 
     private long lastTimeBackPressed;
 

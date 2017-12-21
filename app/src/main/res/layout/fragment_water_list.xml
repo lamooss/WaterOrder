@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/SendOrderButton"
-            android:text="주문신청하기"
+            android:text="주문완료 및 SMS보내기"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:textSize="18dp"
