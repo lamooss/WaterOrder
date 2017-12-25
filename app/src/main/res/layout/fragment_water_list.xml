@@ -92,32 +92,19 @@
         android:layout_weight="1"
         android:background="@color/colorPrimary">
 
-        <!--
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/logOutput"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </ScrollView>
-        -->
-
         <Button
+            android:id="@+id/SendOrderButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/SendOrderButton"
-            android:text="주문완료 및 SMS보내기"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="18dp"
-            android:background="@color/colorPrimary"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            />
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:onClick="sendSMS"
+            android:text="주문완료 및 SMS보내기"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
 
 
