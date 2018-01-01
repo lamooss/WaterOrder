@@ -52,10 +52,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-
         android:layout_gravity="center"
+
         android:layout_marginTop="10dp"
+        android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingRight="10dp">
@@ -100,12 +100,10 @@
             android:layout_marginTop="8dp"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
-            android:onClick="sendSMS"
             android:text="주문완료 및 SMS보내기"
             android:textColor="#FFFFFF"
             android:textSize="18dp"
             android:textStyle="bold" />
-
 
 
     </LinearLayout>

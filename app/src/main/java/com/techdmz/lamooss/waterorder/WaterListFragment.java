@@ -154,7 +154,10 @@ public class WaterListFragment extends Fragment {
         // Push Message start
 
         // ID 가져오기
+        /*
         getRegistrationId();
+        */
+
 
         Button button = (Button) getView().findViewById(R.id.SendOrderButton);
         button.setOnClickListener(new View.OnClickListener() {
@@ -162,7 +165,15 @@ public class WaterListFragment extends Fragment {
             public void onClick(View view) {
 
                 // 1. SMS발송 용 코드
-                sendSMS(getView());
+                // 1-1 sms발송 방식 1
+                // sendSMS(view);
+
+                // 1-2 sms 발송 방식 2
+
+                Messenger messenger = new Messenger(getContext());
+                messenger.sendMessageTo("01045789867", "First test msg");
+
+                Toast.makeText(getActivity(), "Message transmission is completed.", Toast.LENGTH_SHORT).show();
 
                 // 2. 데이터전송 용 코드
                 /*
@@ -175,16 +186,17 @@ public class WaterListFragment extends Fragment {
             }
         });
 
-
+        /*
         queue= Volley.newRequestQueue(getContext().getApplicationContext());
 
         // getIntent는 Activity에서만 가져오므로... 억지로 해봄..
         Intent passedIntent =  ((Activity)getContext()).getIntent();
         processIntent(passedIntent);
+        */
     }
 
 
-
+/*
     public void processIntent(Intent intent)
     {
         if(intent != null)
@@ -305,7 +317,7 @@ public class WaterListFragment extends Fragment {
         logOutput.append(data + "\n");
     }
 
-
+*/
     // SMS
     public void sendSMS(View v){
         //String smsNum = smsNumber.getText().toString();
@@ -568,6 +580,24 @@ public class WaterListFragment extends Fragment {
             }
         }
         */
+
+    }
+}
+
+class Messenger {
+    private Context mContext;
+
+    public Messenger(Context mContext)
+    {
+        this.mContext = mContext;
+    }
+
+    public void sendMessageTo(String phoneNum, String message)
+    {
+        SmsManager smsManager = SmsManager.getDefault();
+        smsManager.sendTextMessage(phoneNum, null, message, null, null);
+
+        Toast.makeText(mContext, "Message transmission is completed.", Toast.LENGTH_SHORT).show();
 
     }
 }
