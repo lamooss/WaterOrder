@@ -2,6 +2,7 @@ package com.techdmz.lamooss.waterorder;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -17,10 +18,12 @@ public class WaterListAdapter extends BaseAdapter {
 
     private Context context;
     private List<Water> waterList;
+    private Fragment parent;
 
-    public WaterListAdapter(Context context, List<Water> waterList) {
+    public WaterListAdapter(Context context, List<Water> waterList, Fragment parent) {
         this.context = context;
         this.waterList = waterList;
+        this.parent = parent;
     }
 
     @Override

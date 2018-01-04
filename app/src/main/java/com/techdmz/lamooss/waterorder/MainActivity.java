@@ -2,6 +2,7 @@ package com.techdmz.lamooss.waterorder;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -26,10 +27,17 @@ public class MainActivity extends AppCompatActivity {
     TextView ReceivedFCMMsg;
     */
 
+    public static String userID;        // LoginActivity에서 Intent.putExtra로 넘어온 값 셋팅하기 위한 변수
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        // LoginActivity 에서 Intent.putExtra로 넘어온 값 설정
+        userID = getIntent().getStringExtra("userID");
 
         final Button WaterListButton = (Button)findViewById(R.id.WaterListButton);
         final Button OrderMgrButton = (Button)findViewById(R.id.OrderMgrButton);

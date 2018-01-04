@@ -130,7 +130,7 @@ public class WaterListFragment extends Fragment {
 
         WaterListView = (ListView) getView().findViewById(R.id.WaterListView);
         waterList = new ArrayList<Water>();
-        adapter = new WaterListAdapter(getContext().getApplicationContext(), waterList);
+        adapter = new WaterListAdapter(getContext().getApplicationContext(), waterList, this);
         WaterListView.setAdapter(adapter);
 
         logOutput = (TextView) getView().findViewById(R.id.LogOutput);
