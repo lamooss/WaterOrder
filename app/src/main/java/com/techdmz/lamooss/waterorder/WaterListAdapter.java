@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -64,6 +65,23 @@ public class WaterListAdapter extends BaseAdapter {
 
         //v.setTag("1");
         v.setTag(waterList.get(i).getWater_id());
+
+        Button incrementButton = (Button)v.findViewById(R.id.incrementButton);
+        incrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Button decrementButton = (Button)v.findViewById(R.id.decrementButton);
+        decrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         return v;
     }
 

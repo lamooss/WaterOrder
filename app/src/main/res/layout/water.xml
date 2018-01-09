@@ -73,11 +73,13 @@
             android:layout_weight="1">
 
             <Button
+                android:id="@+id/decrementButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
                 android:layout_weight="1"
-                android:onClick="increment"
-                android:text="+" />
+                android:onClick="decrement"
+                android:text="-" />
 
             <TextView
                 android:id="@+id/quantity_text_view"
@@ -91,12 +93,12 @@
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/incrementButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginBottom="16dp"
                 android:layout_weight="1"
-                android:onClick="decrement"
-                android:text="-" />
+                android:text="+" />
+
 
         </LinearLayout>
     </LinearLayout>
