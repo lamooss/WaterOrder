@@ -12,6 +12,8 @@ public class Water {
     int water_price;
     String water_useyn;
 
+    int water_quantity;
+
     public Water(int water_id, String water_name, int water_size, String water_type, int water_price, String water_useyn) {
         this.water_id = water_id;
         this.water_name = water_name;
@@ -19,6 +21,8 @@ public class Water {
         this.water_type = water_type;
         this.water_price = water_price;
         this.water_useyn = water_useyn;
+        this.water_quantity = 100;
+
     }
 
     public int getWater_id() {
@@ -67,5 +71,13 @@ public class Water {
 
     public void setWater_useyn(String water_useyn) {
         this.water_useyn = water_useyn;
+    }
+
+    public int getWater_quantity() {
+        return water_quantity;
+    }
+
+    public void setWater_quantity(int water_quantity) {
+        this.water_quantity = water_quantity;
     }
 }
