@@ -140,9 +140,6 @@ public class WaterListFragment extends Fragment {
         adapter.notifyDataSetChanged();
         WaterListView.setAdapter(adapter);
 
-        logOutput = (TextView) getView().findViewById(R.id.LogOutput);
-        TextViewSendData = (TextView)getView().findViewById(R.id.TextViewSendData);
-
 
         /*
         // 어댑터를 다시 달아보자....... custom listview 컨트롤용

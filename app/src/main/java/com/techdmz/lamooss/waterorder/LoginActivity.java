@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                 final String userID = idText.getText().toString();
                 String userPassword = passwordText.getText().toString();
 
+                /* Real : 로그인 기능. 오픈할때는 밑에 test 삭제해야 함.
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -80,10 +81,19 @@ public class LoginActivity extends AppCompatActivity {
 
                     }
                 };
+                */
 
+                // For test : 로그인없이 테스트 하기 위해
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("userID", userID);
+                LoginActivity.this.startActivity(intent);
+                finish();
+
+                /*
                 LoginRequest loginRequest = new LoginRequest(userID, userPassword, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                 queue.add(loginRequest);
+                */
             }
         });
     }

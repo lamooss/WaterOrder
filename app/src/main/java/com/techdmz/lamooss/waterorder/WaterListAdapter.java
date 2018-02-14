@@ -117,6 +117,7 @@ public class WaterListAdapter extends BaseAdapter {
         }
         */
 
+        /*
         Button incrementButton = (Button)v.findViewById(R.id.incrementButton);
         incrementButton.setTag(position);
         incrementButton.setOnClickListener(mOnClickListenerIncBtn);
@@ -124,10 +125,13 @@ public class WaterListAdapter extends BaseAdapter {
         Button decrementButton = (Button)v.findViewById(R.id.decrementButton);
         decrementButton.setTag(position);
         decrementButton.setOnClickListener(mOnClickListenerDecBtn);
+        */
 
         return v;
     }
 
+    // For Increment / Decrement Button
+    /*
     Button.OnClickListener mOnClickListenerIncBtn = new Button.OnClickListener(){
 
         @Override
@@ -163,6 +167,7 @@ public class WaterListAdapter extends BaseAdapter {
             System.out.print("2222222");
         }
     };
+    */
 
 
     @Nullable
