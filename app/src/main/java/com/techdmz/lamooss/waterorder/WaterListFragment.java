@@ -9,6 +9,7 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.Space;
@@ -44,8 +45,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 
 
@@ -105,6 +109,7 @@ public class WaterListFragment extends Fragment {
     private ArrayAdapter waterAdapter;
     private Spinner waterSpinner;
 
+    // WaterListView 관련
     private ListView WaterListView;
     private WaterListAdapter adapter;
     private List<Water> waterList;
@@ -118,6 +123,7 @@ public class WaterListFragment extends Fragment {
 
     RequestQueue queue;
 
+
     // For Push Message variable End
 
 
@@ -129,12 +135,43 @@ public class WaterListFragment extends Fragment {
 
 
         WaterListView = (ListView) getView().findViewById(R.id.WaterListView);
-        waterList = new ArrayList<Water>();
+        waterList = new ArrayList<>();
         adapter = new WaterListAdapter(getContext().getApplicationContext(), waterList, this);
+        adapter.notifyDataSetChanged();
         WaterListView.setAdapter(adapter);
 
         logOutput = (TextView) getView().findViewById(R.id.LogOutput);
         TextViewSendData = (TextView)getView().findViewById(R.id.TextViewSendData);
+
+
+        /*
+        // 어댑터를 다시 달아보자....... custom listview 컨트롤용
+        final ArrayList<String> items = new ArrayList<String>();
+        final ArrayAdapter adapter2 = new ArrayAdapter(getContext().getApplicationContext(), android.R.layout.simple_list_item_single_choice, items);
+        final ListView listView = (ListView) getView().findViewById(R.id.WaterListView);
+        adapter2.notifyDataSetChanged();
+        listView.setAdapter(adapter2);
+
+        Button incrementButton = (Button)getView().findViewById(R.id.incrementButton);
+        incrementButton.setOnClickListener(new Button.OnClickListener(){
+               @Override
+               public void onClick(View v) {
+                   int position = Integer.parseInt(v.getTag().toString());
+                   System.out.print("1111111");
+
+                   TextView quantityTextView = (TextView) v.findViewById(R.id.quantity_text_view);
+
+                   int iOrgQuantity = waterList.get(position).getWater_quantity();
+
+                   iOrgQuantity++;
+                   items.set(position, "222222222");
+                   adapter2.notifyDataSetChanged();
+                   //String sQuantity = quantityTextView.
+                }
+          });
+          */
+
+
 
         // 주문하기 버튼클릭시 자동 조회
         new BackgroudTask().execute();
@@ -157,7 +194,6 @@ public class WaterListFragment extends Fragment {
         /*
         getRegistrationId();
         */
-
 
         Button button = (Button) getView().findViewById(R.id.SendOrderButton);
         button.setOnClickListener(new View.OnClickListener() {
